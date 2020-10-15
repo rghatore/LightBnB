@@ -21,7 +21,7 @@ INSERT INTO properties (
   street,
   city,
   province,
-  postal_code,
+  post_code,
   active)
 VALUES (
   1,
