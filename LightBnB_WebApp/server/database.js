@@ -1,5 +1,15 @@
 const properties = require('./json/properties.json');
 const users = require('./json/users.json');
+const { Pool } = require('pg');
+
+//  connceting to postgres using pool
+const pool = new Pool({
+  user: 'vagrant',
+  password: '123',
+  host: 'localhost',
+  port: 5432,             // default port for postgres
+  database: 'lightbnb'
+});
 
 /// Users
 
