@@ -2,7 +2,7 @@ const properties = require('./json/properties.json');
 const users = require('./json/users.json');
 const { Pool } = require('pg');
 
-//  connceting to postgres using pool
+//  connecting to postgres using pool
 const pool = new Pool({
   user: 'vagrant',
   password: '123',
@@ -37,7 +37,7 @@ const getUserWithEmail = (email) => {
     FROM users
     WHERE email = $1;
   `, [email])
-  .then(response => response.rows[0])
+  .then((response) => response.rows[0])
   .catch(() => null);
 }
 exports.getUserWithEmail = getUserWithEmail;
